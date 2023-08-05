@@ -49,7 +49,7 @@ class _CarState extends State<Car> {
               Center(
                 child: Container(
                   height: 40,
-                  width: 250,
+                  width: 260,
                   margin: const EdgeInsets.only(top: 160),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50),
@@ -214,9 +214,9 @@ class _CarState extends State<Car> {
                       ),
                     ],
                   ))),
-          const SizedBox(height: 20),
           Center(
             child: Container(
+              margin: const EdgeInsets.only(top: 25),
               height: 50,
               width: 260,
               decoration: BoxDecoration(
@@ -249,8 +249,8 @@ class _CarState extends State<Car> {
                       ],
                     ),
                   ),
-                  const SizedBox(width: 25),
                   Container(
+                    margin: const EdgeInsets.only(left: 20),
                     height: 28,
                     width: 80,
                     alignment: Alignment.centerRight,
@@ -271,12 +271,9 @@ class _CarState extends State<Car> {
               ),
             ),
           ),
-          const SizedBox(
-            height: 20,
-          ),
-          const SizedBox(height: 5),
           Container(
             width: 260,
+            margin: const EdgeInsets.only(top: 25),
             color: Colors.white,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -284,8 +281,8 @@ class _CarState extends State<Car> {
                 const Text('New coming!!!',
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                const SizedBox(height: 20),
                 Container(
+                  margin: const EdgeInsets.only(top: 25),
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(18),
@@ -300,14 +297,13 @@ class _CarState extends State<Car> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Container(
-                        margin: const EdgeInsets.only(left: 10),
+                        margin: const EdgeInsets.only(left: 8, right: 8),
                         height: 55,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(50),
                             border: Border.all(color: Colors.white)),
                         child: Image.asset('assets/6.jpg'),
                       ),
-                      const SizedBox(width: 8),
                       Column(
                         children: [
                           const Text(
@@ -340,8 +336,8 @@ class _CarState extends State<Car> {
                     ],
                   ),
                 ),
-                const SizedBox(height: 20),
                 Container(
+                  margin: const EdgeInsets.only(top: 25),
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(18),
@@ -356,21 +352,20 @@ class _CarState extends State<Car> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Container(
-                        margin: const EdgeInsets.only(left: 10),
+                        margin: const EdgeInsets.only(left: 8, right: 8),
                         height: 55,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(50),
                             border: Border.all(color: Colors.white)),
                         child: Image.asset('assets/gggg.jpg'),
+                        
                       ),
-                      const SizedBox(width: 8),
                       Column(
                         children: [
                           const Text(
                             'Porsche GTR',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
-                          const SizedBox(width: 50),
                           Row(
                             children: [
                               Image.asset(
@@ -395,8 +390,8 @@ class _CarState extends State<Car> {
                     ],
                   ),
                 ),
-                const SizedBox(height: 20),
                 Container(
+                  margin: const EdgeInsets.only(top: 25),
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(18),
@@ -411,21 +406,19 @@ class _CarState extends State<Car> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Container(
-                        margin: const EdgeInsets.only(left: 10),
+                        margin: const EdgeInsets.only(left: 8, right: 8),
                         height: 55,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(50),
                             border: Border.all(color: Colors.white)),
                         child: Image.asset('assets/7.jpg'),
                       ),
-                      const SizedBox(width: 8),
                       Column(
                         children: [
                           const Text(
                             'Porsche GTR',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
-                          const SizedBox(width: 50),
                           Row(
                             children: [
                               Image.asset(
