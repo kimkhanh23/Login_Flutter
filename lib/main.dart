@@ -32,6 +32,8 @@ class _LoginPageState extends State<LoginPage> {
   final _userController = TextEditingController();
   bool _userInvalid = true;
   bool _obscurePassword = true;
+  String userName = "PDA";
+  String passWord = "123";
 
   void loginState() {
     if (_userController.text.isEmpty) {
@@ -47,9 +49,12 @@ class _LoginPageState extends State<LoginPage> {
     if (!_userInvalid || !_passInvalid) {
       _showDialog();
     }
-    if (_userInvalid && _passInvalid) {
+    if (_userController.text == userName && _passController.text == passWord) {
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => const HomePage()));
+    }
+    if (_userController.text != userName || _passController.text != passWord) {
+      _errorInfor();
     }
   }
 
@@ -60,6 +65,24 @@ class _LoginPageState extends State<LoginPage> {
           return CupertinoAlertDialog(
               title: const Text('ERROR!!!'),
               content: const Text('Ban chua dien thong tin'),
+              actions: [
+                MaterialButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Text('OK'),
+                )
+              ]);
+        });
+  }
+
+  void _errorInfor() {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return CupertinoAlertDialog(
+              title: const Text('WARNING!!!'),
+              content: const Text('Tài Khoản Này Không Có Thực'),
               actions: [
                 MaterialButton(
                   onPressed: () {
