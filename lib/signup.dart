@@ -2,20 +2,26 @@
 
 import 'package:flutter/material.dart';
 
-class SignUpPage extends StatelessWidget {
-  const SignUpPage({super.key});
+class SignUpPage extends StatefulWidget {
+  final String? title;
+  const SignUpPage({super.key, required this.title});
 
+  @override
+  State<SignUpPage> createState() => _SignUpPageState();
+}
+
+class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Sign Up'),
+        title: Text(widget.title!),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.only(top: 160),
+              margin: const EdgeInsets.only(top: 160),
               height: 50,
               width: 200,
               decoration: BoxDecoration(
@@ -36,7 +42,7 @@ class SignUpPage extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 50),
+              margin: const EdgeInsets.only(top: 50),
               height: 50,
               width: 200,
               decoration: BoxDecoration(
@@ -59,7 +65,7 @@ class SignUpPage extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 50),
+              margin: const EdgeInsets.only(top: 50),
               height: 50,
               width: 200,
               decoration: BoxDecoration(
